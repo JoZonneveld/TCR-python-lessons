@@ -11,6 +11,7 @@ class Game:
         self.__screen = pygame.display.set_mode([screen_width, screen_height])
         self.__clock = pygame.time.Clock()
         self.__player = Player(self.__screen, Vector((screen_width / 2) - 25, (screen_height / 2) - 25), 50, 50)
+        # self.__player = Player(self.__screen, Vector(0, 0), 50, 50)
 
     @staticmethod
     def __quit_program():

@@ -2,7 +2,7 @@ def create_grid(n):
     for x in range(n):
         output = ""
         for y in range(n):
-            output += str(y)
+            output += '*'
         print(output)
 
 

@@ -19,7 +19,6 @@ class Player:
 
         if keys[pygame.K_LEFT]:
             self.__vector.x -= player_speed
-
             if self.__vector.x < 0:
                 self.__vector.x = 0
 
