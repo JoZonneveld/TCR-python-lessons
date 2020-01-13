@@ -1,7 +1,12 @@
-def is_even(x):
-    return x % 2 == 0
+array = ['this', 'is', 'no']
 
 
-array = [3, 2, 3, 4]
+def check_on_i(x):
+    return 'i' in x
 
-print(list(filter(is_even, array)))
+
+res = list(filter(check_on_i, array))
+res_lambda = list(filter(lambda x: 'i' in x, array))
+
+print(res)
+print(res_lambda)
