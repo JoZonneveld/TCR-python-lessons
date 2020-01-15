@@ -1,8 +1,8 @@
 import pygame
-from Lesson4.color.Color import *
-from Lesson4.Settings import screen_width, screen_height, player_speed
-from Lesson4.player.projectile.Projectile import Projectile
-from Lesson4.vector.Vector import Vector
+from Jaar2.Game.color.Color import *
+from Jaar2.Game.Settings import screen_width, screen_height, player_speed
+from Jaar2.Game.player.projectile.Projectile import Projectile
+from Jaar2.Game.vector.Vector import Vector
 
 
 class Player:

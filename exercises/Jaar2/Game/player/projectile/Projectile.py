@@ -1,7 +1,7 @@
 import pygame
 
-from Lesson4.Settings import projectile_speed, screen_width, screen_height
-from Lesson4.color.Color import red
+from Jaar2.Game.Settings import projectile_speed, screen_width, screen_height
+from Jaar2.Game.color.Color import red
 
 
 class Projectile:
