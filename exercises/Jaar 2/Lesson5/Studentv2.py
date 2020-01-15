@@ -29,14 +29,16 @@ stu4 = Student('04', 'tst4', 3, 'tst@tsr.nl', '1-1-1990')
 
 students = [stu1, stu2, stu3, stu4]
 
-for student in filter(lambda x: x.get_year() == 3, students):
-    print(student.get_name())
+# for student in filter(lambda x: x.get_year() == 3, students):
+#     print(student.get_name())
+
+
+def get_the_name(student):
+    return student.get_name()
 
 # Map example
-'''
-for student_nr in map(lambda x: x.get_student_nr(), students):
+for student_nr in map(get_the_name, students):
     print(student_nr)
-'''
 
 # Filter example
 

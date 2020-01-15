@@ -15,3 +15,6 @@ class Student:
     def set_email(self, email):
         self.email = email
 
+
+stu = Student(1,2,3,4,5)
+
