@@ -1,5 +1,5 @@
-from flask import Blueprint
-from Model.Student import Student
+from flask import Blueprint, request
+from Flask.Model.Student import Student
 import jsonpickle
 
 student_controller = Blueprint('student_controller', __name__)
@@ -14,11 +14,19 @@ students = [stu1, stu2, stu3, stu4]
 
 @student_controller.route('/student')
 def get_students():
-    return jsonpickle.encode({'students': students}, unpicklable=False)
+    return jsonpickle.encode(students, unpicklable=False)
 
 
 @student_controller.route('/student/add', methods=['POST'])
 def add_student():
-    students.append(Student('05', 'dfdsf', 3, 'sdffds', 'sdfds'))
+    if request.method == 'POST':
+        student_nr = request.json['student_nr']
+        name = request.json['name']
+        year = request.json['year']
+        email = request.json['email']
+        birthday = request.json['birthday']
 
-    return get_students()
+        print(request.json)
+        new_student = Student(student_nr, name, year, email, birthday)
+        students.append(new_student)
+        return jsonpickle.encode({new_student}, unpicklable=False)
