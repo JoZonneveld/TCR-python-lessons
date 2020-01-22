@@ -1,4 +1,4 @@
-from Controller.StudentController.StudentController import student_controller
+from Flask.Controller.StudentController.StudentController import student_controller
 
 controllers = [
     student_controller

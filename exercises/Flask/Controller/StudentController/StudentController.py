@@ -1,5 +1,5 @@
 from flask import Blueprint
-from Model.Student import Student
+from Flask.Model.Student import Student
 import jsonpickle
 
 student_controller = Blueprint('student_controller', __name__)
