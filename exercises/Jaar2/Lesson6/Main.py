@@ -6,7 +6,9 @@ stu2 = Student('02', 'tst2', 2, 'tst@tsr.nl', '1-1-1990')
 stu3 = Student('03', 'tst3', 2, 'tst@tsr.nl', '1-1-1990')
 stu4 = Student('04', 'tst4', 2, 'tst@tsr.nl', '1-1-1990')
 
-cl = Class('APM2')
+students = [stu1, stu2, stu3, stu4]
+
+cl = Class('APM2', students)
 
 print(cl.get_students())
 

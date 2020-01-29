@@ -4,7 +4,7 @@ import jsonpickle
 
 student_controller = Blueprint('student_controller', __name__)
 
-stu1 = Student('01', 'tst1', 2, 'tst@tsr.nl', '1-1-1990')
+stu1 = Student('01', 'tst1hello', 2, 'tst@tsr.nl', '1-1-1990')
 stu2 = Student('02', 'tst2', 2, 'tst@tsr.nl', '1-1-1990')
 stu3 = Student('03', 'tst3', 2, 'tst@tsr.nl', '1-1-1990')
 stu4 = Student('04', 'tst4', 2, 'tst@tsr.nl', '1-1-1990')
@@ -30,3 +30,16 @@ def add_student():
         new_student = Student(student_nr, name, year, email, birthday)
         students.append(new_student)
         return jsonpickle.encode({new_student}, unpicklable=False)
+
+
+@student_controller.route('/student/delete', methods=['DELETE'])
+def delete_student():
+    if request.method == 'DELETE':
+        student_nr_to_delete = request.json['student_nr']
+        for student in students:
+            if student.student_nr == student_nr_to_delete:
+                students.remove(student)
+
+                return jsonpickle.encode({student}, unpicklable=False)
+
+

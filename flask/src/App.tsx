@@ -19,7 +19,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       {students.map((x, key) => (
-        <div key={key}>{x.name}</div>
+        <div key={key}>{x.student_nr}</div>
       ))}
     </div>
   );
