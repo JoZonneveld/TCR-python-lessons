@@ -20,12 +20,12 @@ class Class:
         self.__name = name
 
     def create_student(self):
-        student_nr = rnd.randint(0, 9999999)
-        name = input('Wat is de naam van de student? ')
-        year = int(input('Welk jaar zit de student? '))
-        email = input('Wat is het email adres van de student? ')
-        birthday = input('Wat is de geboorte datum van de student? ')
+        student_nr = input('Vul een studentnr in: ')
+        name = input('Vul een naam in: ')
+        year = int(input('voer een jaar in: '))
+        email = input('Vul een email in: ')
+        birthday = input('Vul een birthday in: ')
 
         new_student = Student(student_nr, name, year, email, birthday)
-
         self.add_student(new_student)
+        print(new_student)

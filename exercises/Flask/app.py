@@ -11,8 +11,8 @@ for controller in controllers:
 
 @app.route('/')
 def hello_world():
-    return 'App!'
+    return '<div style="background-color: black">ddd</div>'
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
